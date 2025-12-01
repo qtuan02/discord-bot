@@ -1,0 +1,12 @@
+services:
+  - type: worker
+    name: discord-bot
+    env: node
+    buildCommand: pnpm install && pnpm build
+    startCommand: pnpm start
+    envVars:
+      - key: DISCORD_TOKEN
+        sync: false
+      - key: ASSISTANT_AI_API_URL
+        sync: false
+
